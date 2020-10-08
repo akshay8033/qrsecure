@@ -23,6 +23,9 @@ func GetTxCmd(cdc *codec.Codec) *cobra.Command {
 
 	qrsecureTxCmd.AddCommand(flags.PostCommands(
     // this line is used by starport scaffolding # 1
+		GetCmdCreateProduct(cdc),
+		GetCmdSetProduct(cdc),
+		GetCmdDeleteProduct(cdc),
 	)...)
 
 	return qrsecureTxCmd
